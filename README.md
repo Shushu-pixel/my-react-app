@@ -29,7 +29,7 @@ Deploy the generated `dist/` directory to a static web host. Vite uses relative 
 3. Open **Actions → Deploy website to GitHub Pages → Run workflow** and select `main`. Future pushes to `main` deploy automatically.
 4. When the workflow succeeds, GitHub Pages will show the live site URL. For this repository, the expected address is <https://shushu-pixel.github.io/my-react-app/>.
 
-The Pages workflow has been prepared locally. It has not been pushed or deployed from this workspace. If Pages is unavailable for a private repository, make the repository public or use a GitHub plan that supports private-repository Pages. Do not replace the existing `bb2pch.github.io` registration portal with this website.
+The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployment success in the repository’s Actions tab; a local build does not by itself publish the website. If Pages is unavailable for a private repository, make the repository public or use a GitHub plan that supports private-repository Pages. Do not replace the existing `bb2pch.github.io` registration portal with this website.
 
 ## Content and links
 
