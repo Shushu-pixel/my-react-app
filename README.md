@@ -46,9 +46,11 @@ The three event cards are **programme previews**, not confirmed scheduled events
 
 The company logo supplied for this website is stored in `public/images/company-logo.png` and appears in the header, footer, and browser icon. It is prepared with a transparent background and displayed on a white backplate to keep the original dark outlines visible on the navy page. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
 
-The drill page displays the six supplied photographs directly in a responsive gallery. Original JPEGs were downloaded from the company’s shared Drive folder and verified before saving under `public/images/drill/`. Every image displays at its natural aspect ratio with a caption; the photographs are not links and do not open a folder or lightbox. The source folder currently contains six JPEGs and no video files.
+The drill page displays the six supplied photographs directly in a responsive gallery. Original JPEGs were downloaded from the company’s shared Drive folder and verified before saving under `public/images/drill/`. Every image displays at its natural aspect ratio with a caption; the photographs are not links and do not open a folder or lightbox.
 
-The company logo, drill photographs, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
+The uploaded `IMG_7749.MP4` appears above the photographs as `public/videos/drill-practice.mp4`, with native playback, volume, seeking and fullscreen controls. The H.264/AAC streams are preserved without re-encoding, and MP4 metadata is moved to the beginning for streaming. Its preview is an actual frame saved as `public/images/drill-video-poster.jpg`. The video plays inline on mobile, preloads metadata only, and does not autoplay.
+
+The company logo, drill photographs and video, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the video. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 
 ## Validation
 

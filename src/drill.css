@@ -75,3 +75,15 @@
 
 @media(max-width:1000px){.drill-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.drill-photo-caption{padding:20px;gap:13px}}
 @media(max-width:540px){.drill-photo-gallery{grid-template-columns:minmax(0,1fr);gap:23px}.drill-photo{border-radius:11px}.drill-photo-caption{padding:21px 22px 23px;gap:15px}.drill-photo-caption h3{font-size:18px}.drill-photo-caption p{font-size:12px;line-height:1.9}.drill-photo-number{font-size:10px;padding-top:3px}}
+
+.drill-video-card{margin:0 0 32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);overflow:hidden;border:1px solid #7e98bc30;border-radius:13px;background:#0e1b31;scroll-margin-top:30px}
+.drill-video-frame{min-width:0;display:flex;align-items:center;justify-content:center;background:#050a14}
+.drill-video-player{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;background:#050a14}
+.drill-video-caption{align-self:center;padding:40px;min-width:0}
+.drill-video-caption h3{font-family:var(--heading);font-size:37px;line-height:1.2;letter-spacing:-1.7px;font-weight:500;margin-top:26px}
+.drill-video-caption h3>span{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#dcc37b;font-weight:400}
+.drill-video-caption>p{font-size:13px;line-height:1.9;color:#a2b0c8;margin-top:23px;max-width:330px}
+.drill-video-note{display:block;font-family:monospace;font-size:7px;line-height:1.8;letter-spacing:1.2px;color:#788cab;border-top:1px solid #96aec417;padding-top:21px;margin-top:29px}
+@media(max-width:1000px){.drill-video-caption{padding:30px}.drill-video-caption h3{font-size:31px}.drill-video-caption>p{font-size:12px}}
+@media(max-width:760px){.drill-video-card{grid-template-columns:minmax(0,1fr);margin-bottom:26px}.drill-video-player{max-height:580px}.drill-video-caption{padding:29px}.drill-video-caption h3{font-size:33px;margin-top:20px}.drill-video-caption>p{max-width:100%;margin-top:17px}.drill-video-note{margin-top:23px;padding-top:18px}}
+@media(max-width:540px){.drill-video-card{border-radius:11px}.drill-video-caption{padding:26px 22px}.drill-video-caption h3{font-size:31px}.drill-video-caption>p{font-size:12px}.drill-video-note{font-size:6px;letter-spacing:.9px}}

@@ -65,7 +65,7 @@ export default function DrillPage({ homeHref = './' }) {
         <nav id="drill-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Drill navigation">
           <a href="#overview" onClick={closeMenu}>Overview</a>
           <a href="#learning" onClick={closeMenu}>What we learn</a>
-          <a href="#media" onClick={closeMenu}>Drill photos</a>
+          <a href="#media" onClick={closeMenu}>Photos & video</a>
           <a className="mobile-join" href={REGISTER_URL} target="_blank" rel="noreferrer">Join us <ArrowUpRight size={14} /></a>
         </nav>
         <a className="header-join" href={REGISTER_URL} target="_blank" rel="noreferrer">Join the company <ArrowUpRight size={15} /></a>
@@ -85,7 +85,7 @@ export default function DrillPage({ homeHref = './' }) {
             <p>More than marching. Drill builds discipline, teamwork, and the confidence to move forward together.</p>
             <div className="drill-hero-actions">
               <a className="button button-gold" href="#learning">What we learn <ArrowDown size={17} /></a>
-              <a className="button button-outline" href="#media">See drill photos <ArrowRight size={17} /></a>
+              <a className="button button-outline" href="#media">Photos & video <ArrowRight size={17} /></a>
             </div>
           </div>
           <div className="drill-formation" aria-hidden="true">
@@ -122,8 +122,22 @@ export default function DrillPage({ homeHref = './' }) {
       </section>
 
       <section id="media" className="drill-media section-shell" aria-labelledby="drill-media-title">
-        <div className="drill-section-top"><DrillEyebrow>OUR COMPANY IN ACTION</DrillEyebrow><span className="drill-section-index">02 / DRILL PHOTOS</span></div>
+        <div className="drill-section-top"><DrillEyebrow>OUR COMPANY IN ACTION</DrillEyebrow><span className="drill-section-index">02 / PHOTOS & VIDEO</span></div>
         <div className="drill-media-heading"><div><h2 id="drill-media-title">See us <span>in step.</span></h2><p>Discipline, teamwork and confidence, one parade at a time.<br />A few moments from drill with our company.</p></div></div>
+        <figure className="drill-video-card" id="drill-video">
+          <div className="drill-video-frame">
+            <video className="drill-video-player" controls playsInline preload="metadata" width="464" height="848" poster={`${import.meta.env.BASE_URL}images/drill-video-poster.jpg`} aria-label="2nd Puchong Company drill practice video" aria-describedby="drill-video-description">
+              <source src={`${import.meta.env.BASE_URL}videos/drill-practice.mp4`} type="video/mp4" />
+              Your browser does not support embedded video. <a href={`${import.meta.env.BASE_URL}videos/drill-practice.mp4`}>Watch the drill video</a>.
+            </video>
+          </div>
+          <figcaption className="drill-video-caption">
+            <DrillEyebrow>DRILL IN MOTION</DrillEyebrow>
+            <h3>One squad.<br /><span>A shared rhythm.</span></h3>
+            <p id="drill-video-description">Watch our members practise drill together, putting discipline, coordination and teamwork into action.</p>
+            <span className="drill-video-note">2ND PUCHONG COMPANY · DRILL PRACTICE</span>
+          </figcaption>
+        </figure>
         <div className="drill-photo-gallery">
           {drillPhotos.map((photo, index) => <figure className="drill-photo" key={photo.filename}>
             <img className="drill-photo-image" src={`${import.meta.env.BASE_URL}images/drill/${photo.filename}`} width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
@@ -135,6 +149,6 @@ export default function DrillPage({ homeHref = './' }) {
       <section className="drill-invitation section-shell" aria-labelledby="drill-invitation-title"><div className="drill-invitation-panel"><div><DrillEyebrow>TAKE YOUR FIRST STEP</DrillEyebrow><h2 id="drill-invitation-title">There’s a place<br />in the team <span>for you.</span></h2><p>Boys and girls aged 9–19. No experience needed.<br />Come ready to learn. We’ll grow together.</p></div><a className="button button-gold" href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={18} /></a></div></section>
     </main>
 
-    <footer className="site-footer drill-footer"><div className="section-shell"><div className="drill-footer-top"><div><Brand footer homeHref={homeHref} /><p>Building character. Growing faith.<br />Moving forward, together.</p></div><div className="drill-footer-links"><a href={homeHref}><ArrowLeft size={15} />Back to our company</a><a href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={15} /></a><a href="#media">Drill photos <ArrowRight size={15} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} 2ND PUCHONG COMPANY.</span><span>BOYS & GIRLS, AGED 9–19. ALL ARE WELCOME.</span><a href="#drill-top">BACK TO TOP ↑</a></div></div></footer>
+    <footer className="site-footer drill-footer"><div className="section-shell"><div className="drill-footer-top"><div><Brand footer homeHref={homeHref} /><p>Building character. Growing faith.<br />Moving forward, together.</p></div><div className="drill-footer-links"><a href={homeHref}><ArrowLeft size={15} />Back to our company</a><a href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={15} /></a><a href="#media">Photos & video <ArrowRight size={15} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} 2ND PUCHONG COMPANY.</span><span>BOYS & GIRLS, AGED 9–19. ALL ARE WELCOME.</span><a href="#drill-top">BACK TO TOP ↑</a></div></div></footer>
   </>;
 }
