@@ -1,0 +1,819 @@
+[
+  {
+    "id": "target",
+    "name": "Target",
+    "category": "Compulsory",
+    "summary": "Build the foundation for Brigade life through BB knowledge, citizenship, faith or character education, and recruit drill.",
+    "learn": [
+      "The Brigade’s Object, Motto, history, ranks, uniform, songs, and award scheme",
+      "National symbols, the anthem, and knowledge of the local neighbourhood",
+      "Introductory faith or character lessons and basic recruit drill"
+    ],
+    "classActivities": [
+      "Create a squad quiz covering the BB Object, Motto, history, ranks, and uniform care.",
+      "Identify the national flag and coat of arms, then make a neighbourhood information sheet.",
+      "Practise recruit drill and discuss the introductory faith or character lessons with an Officer."
+    ],
+    "levels": [],
+    "sourcePages": [
+      125,
+      126
+    ]
+  },
+  {
+    "id": "christian-education",
+    "name": "Christian Education",
+    "category": "Compulsory",
+    "summary": "Explore Scripture and put Christian faith into practice through personal relationships, ministry, and community life.",
+    "learn": [
+      "Understanding a Bible passage and applying it in everyday life",
+      "Prayer, devotion, worship, and healthy personal relationships",
+      "Sharing faith, serving in ministry, and understanding community relationships"
+    ],
+    "classActivities": [
+      "Read a chosen Bible passage and discuss how it applies to a friendship or family situation.",
+      "Develop a personal prayer and devotion plan, then reflect on what is learned.",
+      "Plan a supervised ministry contribution and discuss how it serves the church or Sponsoring Body."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      127
+    ]
+  },
+  {
+    "id": "drill",
+    "name": "Drill",
+    "category": "Compulsory",
+    "summary": "Develop discipline, self-control, and confidence through personal drill, squad teamwork, commanding, and instruction.",
+    "learn": [
+      "Static drill, marching, squad movements, and correct uniform presentation",
+      "Drill theory, words of command, and paying compliments",
+      "Advanced Colour Party and Guard of Honour drill and teaching recruits"
+    ],
+    "classActivities": [
+      "Practise static movements and marching in a squad using the current BBM Drill Manual.",
+      "Take turns giving commands and explaining the purpose of each command.",
+      "Prepare an instructor-supervised lesson that teaches a recruit a basic drill movement."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      128,
+      129
+    ]
+  },
+  {
+    "id": "recruitment",
+    "name": "Recruitment",
+    "category": "Compulsory",
+    "summary": "Learn to welcome new members and support company growth through recruiting, programme planning, and communication.",
+    "learn": [
+      "Introducing Brigade life to prospective members",
+      "Planning recruiting talks, displays, and committee work",
+      "Helping new recruits settle in through a sustained programme"
+    ],
+    "classActivities": [
+      "Prepare and rehearse a short recruiting talk for a church, school, or community audience.",
+      "Design an Officer-approved exhibition or presentation explaining the company’s activities.",
+      "Draft a three-month welcome programme that includes introductory Target Award learning."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      130,
+      131
+    ]
+  },
+  {
+    "id": "arts",
+    "name": "Arts",
+    "category": "Electives",
+    "summary": "Develop creative expression through an approved individual or group arts project with regular assessment and a final presentation.",
+    "learn": [
+      "Creative skills in an approved area such as drawing, drama, music, or writing",
+      "Planning a project and recording progress where required",
+      "Presenting finished work for assessment"
+    ],
+    "classActivities": [
+      "Plan an Officer-approved drawing or painting project and present work at agreed progress reviews.",
+      "Develop a group drama or mime piece under an instructor’s guidance.",
+      "Prepare a short written or visual presentation explaining the completed creative work."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      132,
+      133
+    ]
+  },
+  {
+    "id": "craft",
+    "name": "Craft",
+    "category": "Electives",
+    "summary": "Build practical making skills through an approved craft project, with different activities at Basic and Advanced levels.",
+    "learn": [
+      "Hands-on techniques in an approved craft such as origami, sewing, or model making",
+      "Planning, making, and documenting a practical project",
+      "Reviewing progress and presenting completed work"
+    ],
+    "classActivities": [
+      "Propose an origami or model-making project for Officer approval and plan its materials.",
+      "Practise a selected craft technique in an instructor-led class, then develop a finished piece.",
+      "Keep a project record and explain the making process when presenting the final work."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      134
+    ]
+  },
+  {
+    "id": "hobbies",
+    "name": "Hobbies",
+    "category": "Electives",
+    "summary": "Explore a personal interest through an approved hobby project that develops skills, records progress, and produces assessable work.",
+    "learn": [
+      "Skills in an approved interest such as astronomy, photography, or cycle maintenance",
+      "Developing a hobby through regular practice and review",
+      "Recording work and presenting the results of a project"
+    ],
+    "classActivities": [
+      "Plan an Officer-approved photography project and review the results at regular intervals.",
+      "Learn basic cycle maintenance with an instructor and record the work completed.",
+      "Prepare a short presentation or display that shares the outcome of a chosen hobby project."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      135
+    ]
+  },
+  {
+    "id": "athletics",
+    "name": "Athletics",
+    "category": "Electives",
+    "summary": "Improve fitness and athletic performance through track and field events measured against the handbook’s award standards.",
+    "learn": [
+      "Running and hurdling techniques for track events",
+      "Jumping and throwing techniques for field events",
+      "Measuring performance and preparing for the required event standards"
+    ],
+    "classActivities": [
+      "Rotate through instructor-led running, jumping, and throwing practice stations.",
+      "Record practice times and distances and compare them with the applicable handbook standards.",
+      "Prepare a training plan covering two track events and two field events."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      136
+    ]
+  },
+  {
+    "id": "bandsman",
+    "name": "Bandsman",
+    "category": "Electives",
+    "summary": "Develop brass or woodwind musicianship through music theory, instrument care, sight-reading, scales, and band performance.",
+    "learn": [
+      "Music theory and sight-reading at the appropriate level",
+      "Care of a brass or woodwind instrument and confident ensemble playing",
+      "Scales, arpeggios, and pieces in contrasting tempos"
+    ],
+    "classActivities": [
+      "Practise an instructor-selected scale and explain the correct care of the instrument.",
+      "Sight-read a short passage and work on timing with other band members.",
+      "Rehearse contrasting fast and slow pieces for a supervised band performance."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      137,
+      138,
+      139,
+      140
+    ]
+  },
+  {
+    "id": "buglers",
+    "name": "Buglers",
+    "category": "Electives",
+    "summary": "Develop bugle playing through recognised calls, music theory, instrument care, and active participation in a BB band.",
+    "learn": [
+      "Recognising and playing the prescribed basic bugle calls",
+      "Music theory, sight-reading, and instrument maintenance",
+      "Additional calls and continued public band performance at Advanced level"
+    ],
+    "classActivities": [
+      "Listen to and identify calls such as Reveille, Fall-In, and Last Post before practising them.",
+      "Work through an instructor-led bugle exercise focused on accurate notes and timing.",
+      "Demonstrate instrument care and rehearse calls for a supervised band performance."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      137,
+      138,
+      139,
+      140
+    ]
+  },
+  {
+    "id": "drummers",
+    "name": "Drummers",
+    "category": "Electives",
+    "summary": "Build percussion skills through rhythm exercises, music theory, instrument care, and practical band performance.",
+    "learn": [
+      "Accurate percussion playing at different beats and tempos",
+      "Music theory, sight-reading, and instrument maintenance",
+      "Experience on additional percussion instruments at Advanced level"
+    ],
+    "classActivities": [
+      "Practise a percussion exercise at different tempos while keeping a steady beat.",
+      "Read a simple rhythm with the instructor and play it with a small ensemble.",
+      "Explore an additional percussion instrument and demonstrate its correct care."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      137,
+      138,
+      139,
+      140
+    ]
+  },
+  {
+    "id": "pipers",
+    "name": "Pipers",
+    "category": "Electives",
+    "summary": "Develop bagpipe musicianship through prescribed movements, theory, instrument care, and active band participation.",
+    "learn": [
+      "Bagpipe doublings and grace notes across the prescribed range",
+      "Music theory, sight-reading, and instrument care",
+      "More advanced bagpipe movements and confident band performance"
+    ],
+    "classActivities": [
+      "Practise instructor-selected doublings and grace-note exercises.",
+      "Read and rehearse a simple passage while working on steady timing.",
+      "Demonstrate instrument care and rehearse contrasting pieces with the band."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      137,
+      138,
+      139,
+      140
+    ]
+  },
+  {
+    "id": "camping",
+    "name": "Camping",
+    "category": "Electives",
+    "summary": "Develop confident outdoor living through tent work, campsite planning, hygiene, cooking, knots, and equipment care.",
+    "learn": [
+      "Choosing a campsite and pitching, striking, and caring for tents",
+      "Camp hygiene, sanitation, food preparation, and equipment storage",
+      "Knots, lashings, and useful camp gadgets"
+    ],
+    "classActivities": [
+      "Practise pitching, striking, and packing a tent as an instructor-supervised team.",
+      "Draw a campsite layout that considers cooking, washing, water, waste, and safety.",
+      "Practise prescribed knots and lashings, then build a simple camp gadget with guidance."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      141,
+      142,
+      143
+    ]
+  },
+  {
+    "id": "citizenship",
+    "name": "Citizenship",
+    "category": "Electives",
+    "summary": "Explore responsible citizenship by studying government, the justice system, or public issues and the agencies addressing them.",
+    "learn": [
+      "An approved topic in government, justice, drug-abuse prevention, or crime prevention",
+      "The roles of relevant government agencies and supporting organisations",
+      "Ways citizens can contribute to public efforts and community responsibility"
+    ],
+    "classActivities": [
+      "Choose one handbook topic and prepare an introductory classroom presentation.",
+      "Map the relevant agencies and NGOs, identifying their roles and contact points.",
+      "Plan a supervised agency visit and discuss practical ways to support its work."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      144
+    ]
+  },
+  {
+    "id": "communication",
+    "name": "Communication",
+    "category": "Electives",
+    "summary": "Develop clear personal and public communication through interviews, presentations, discussions and other practical formats.",
+    "learn": [
+      "Build listening, conversation and public-speaking skills.",
+      "Explore communication history and formats such as storytelling, media and visual presentations.",
+      "Apply communication skills in interviews and an approved public-communication activity."
+    ],
+    "classActivities": [
+      "Practise asking open questions in pairs, then prepare an interview outline for an approved adult.",
+      "Create a short presentation with visual aids and give it to a squad for feedback.",
+      "Take turns moderating a group discussion while classmates practise listening and responding clearly."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      145,
+      146
+    ]
+  },
+  {
+    "id": "community-service",
+    "name": "Community Service",
+    "category": "Electives",
+    "summary": "Understand local service organisations and take an active, reflective role in meeting community needs.",
+    "learn": [
+      "Understand the work of community organisations and the people they support.",
+      "Plan and carry out practical volunteering or a service project.",
+      "Evaluate a project's effects on its recipients and reflect on personal learning."
+    ],
+    "classActivities": [
+      "Research a local service organisation and present who it helps and how volunteers contribute.",
+      "Plan an officer-approved service project with roles, resources and a record of service hours.",
+      "Prepare a report or visual presentation evaluating the project and what members learned."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      147
+    ]
+  },
+  {
+    "id": "computer-knowledge",
+    "name": "Computer Knowledge",
+    "category": "Electives",
+    "summary": "Explore personal and cloud computing and use digital tools to produce a useful, officer-approved project.",
+    "learn": [
+      "Explain personal-computing hardware, software and current developments.",
+      "Combine tools such as documents, spreadsheets, presentation software or digital design in a project.",
+      "Explore cloud computing and advanced digital projects that benefit the Company."
+    ],
+    "classActivities": [
+      "Compare the roles of hardware and software, then present a selected personal-computing topic.",
+      "Create an approved project using two software categories, such as a spreadsheet budget and presentation.",
+      "Prototype a Company resource using an approved tool such as video editing, web development or an Internet-of-Things device."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      148,
+      149
+    ]
+  },
+  {
+    "id": "environmental-conservation",
+    "name": "Environmental Conservation",
+    "category": "Electives",
+    "summary": "Learn how daily choices, recycling and practical conservation work can help protect the environment.",
+    "learn": [
+      "Apply the minimum-impact code and identify opportunities to reuse and recycle materials.",
+      "Explain how rubbish can harm wildlife and how energy use affects conservation.",
+      "Investigate conservation issues and contribute to a local environmental project."
+    ],
+    "classActivities": [
+      "Research local recycling options and design a reuse idea for an everyday household item.",
+      "Build a conservation scrapbook with thoughtful comments on selected articles.",
+      "Interview a conservation group and help plan a supervised cleanup, planting or habitat-improvement activity."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      150,
+      151
+    ]
+  },
+  {
+    "id": "expedition",
+    "name": "Expedition",
+    "category": "Electives",
+    "summary": "Build outdoor self-sufficiency through route planning, navigation, lightweight camping and supervised expeditions.",
+    "learn": [
+      "Pack suitable equipment and plan a route using a map and compass.",
+      "Practise campcraft, outdoor cooking and responsible care for the countryside.",
+      "Develop expedition safety, accident procedures and basic survival skills; First Aid is a prerequisite."
+    ],
+    "classActivities": [
+      "Work in teams to plan a route and prepare a rucksack checklist for officer review.",
+      "Pitch and strike a tent, then practise planning and preparing a simple camp meal.",
+      "Practise map-and-compass navigation on a supervised route and keep a journey log."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      152,
+      153
+    ]
+  },
+  {
+    "id": "financial-stewardship",
+    "name": "Financial Stewardship",
+    "category": "Electives",
+    "summary": "Connect biblical stewardship with personal budgeting, responsible financial decisions and accountable project finance.",
+    "learn": [
+      "Explore biblical principles of ownership, saving, purposeful spending, giving and tithing.",
+      "Prepare personal budgets, track expenses and reflect on financial habits.",
+      "Consider debt, investment risk and the integrity needed to manage project finances."
+    ],
+    "classActivities": [
+      "Use a sample allowance to prepare a budget for spending, saving and giving.",
+      "Practise expense tracking and prepare to maintain the required three-month personal budget and reflection record.",
+      "Compare debt and investment scenarios, then build a sample event budget with an officer."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      154,
+      155
+    ]
+  },
+  {
+    "id": "fire-and-rescue",
+    "name": "Fire and Rescue",
+    "category": "Electives",
+    "summary": "Understand fire prevention, emergency escape and rescue equipment through appropriate professional instruction.",
+    "learn": [
+      "Recognise common fire causes, fire classifications and methods of extinguishing fires.",
+      "Understand escape from fire and smoke and basic casualty-removal methods.",
+      "Explore fire-service organisation, rescue equipment and water supplies."
+    ],
+    "classActivities": [
+      "Discuss common fire hazards and practise identifying a safe evacuation route in a classroom scenario.",
+      "Arrange a fire-station or Civil Defence visit to learn about equipment and emergency responsibilities.",
+      "Practise approved rescue or hose-equipment techniques only with qualified professional supervision."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      156,
+      157
+    ]
+  },
+  {
+    "id": "first-aid",
+    "name": "First Aid",
+    "category": "Electives",
+    "summary": "Learn to recognise injuries and provide temporary care while awaiting professional treatment under competent first-aid instruction.",
+    "learn": [
+      "Understand a first aider's responsibilities and the basic care of wounds, burns, shock and fractures.",
+      "Practise dressings, CPR and other techniques using authorised first-aid teaching materials.",
+      "Develop further skills in bandaging, unconscious-casualty care and casualty transport."
+    ],
+    "classActivities": [
+      "Practise selecting and applying dressings to simulated injuries with a competent instructor.",
+      "Use training equipment to rehearse CPR and unconscious-casualty scenarios under certified supervision.",
+      "Discuss injury scenarios and demonstrate appropriate first-aid responses for instructor feedback."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      158,
+      159
+    ]
+  },
+  {
+    "id": "gymnastics",
+    "name": "Gymnastics",
+    "category": "Electives",
+    "summary": "Develop strength, stamina and body control through gymnastics training with a qualified instructor and suitable equipment.",
+    "learn": [
+      "Build controlled movement through selected gymnastics disciplines.",
+      "Explore categories such as agility, vaulting, trampoline, bars, strength and stamina.",
+      "Progress from two categories at Basic Level to four further categories at Advanced Level."
+    ],
+    "classActivities": [
+      "Work with a qualified gymnastics instructor to choose suitable categories and review equipment safety.",
+      "Practise instructor-selected agility or apparatus progressions with appropriate supervision and protection.",
+      "Keep a training record showing progress in chosen categories and review it with the instructor."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      160,
+      161
+    ]
+  },
+  {
+    "id": "international-relations",
+    "name": "International Relations",
+    "category": "Electives",
+    "summary": "Discover the worldwide Boys' Brigade family and develop understanding and fellowship across countries and cultures.",
+    "learn": [
+      "Study BB Asia and the Brigade's work in other Asian countries.",
+      "Explore the Global Fellowship and BB movements beyond Asia.",
+      "Build international understanding through exchanges, correspondence and cultural presentations."
+    ],
+    "classActivities": [
+      "Create a country profile with maps, photographs and information about its Boys' Brigade movement.",
+      "Prepare a presentation introducing your Company and Malaysian culture for an approved international exchange.",
+      "Plan an officer-supervised correspondence project with overseas BB members and share what you learn."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      162,
+      163
+    ]
+  },
+  {
+    "id": "life-saving",
+    "name": "Life Saving",
+    "category": "Electives",
+    "summary": "Develop water-safety and rescue skills through the Royal Life Saving Society syllabus and supervised practical assessment.",
+    "learn": [
+      "Understand water-safety principles and methods of reaching and throwing rescues.",
+      "Develop swimming, rescue, resuscitation and casualty-support skills with qualified instruction.",
+      "Progress toward the RLSS Intermediate Certificate and Bronze Medallion standards, with the stated First Aid and Swimming prerequisites."
+    ],
+    "classActivities": [
+      "Discuss water-emergency scenarios and select appropriate rescue aids with an instructor.",
+      "Practise reaching and throwing rescues in a controlled training setting under qualified supervision.",
+      "Complete instructor-led pool sessions to develop the swimming and rescue techniques appropriate to the selected level."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      164,
+      165,
+      166,
+      167,
+      168
+    ]
+  },
+  {
+    "id": "martial-arts",
+    "name": "Martial Arts",
+    "category": "Electives",
+    "summary": "Develop martial-arts skills through regular participation and examinations with an accredited organisation.",
+    "learn": [
+      "Build discipline and technique through consistent, instructor-led practice.",
+      "Understand the grading pathway of an accredited martial-arts organisation.",
+      "Recognise the handbook's Basic and Advanced belt stages for Judo or Taekwando/Karate."
+    ],
+    "classActivities": [
+      "Meet an accredited instructor to discuss the chosen martial art and its grading syllabus.",
+      "Practise approved techniques in a properly supervised training session.",
+      "Keep an attendance and progress record, then review readiness for an accredited examination with the instructor."
+    ],
+    "levels": [
+      "Basic",
+      "Advanced"
+    ],
+    "sourcePages": [
+      169
+    ]
+  },
+  {
+    "id": "nature-awareness",
+    "name": "Nature Awareness",
+    "category": "Electives",
+    "summary": "Explore local habitats and learn to observe, identify and record the plants, animals and natural features found there.",
+    "learn": [
+      "Use maps, a compass and responsible countryside behaviour during nature visits.",
+      "Identify flora, fauna and natural specimens using observations and reference books.",
+      "Understand how soils, bedrock and environmental conditions shape different habitats."
+    ],
+    "classActivities": [
+      "Visit a local habitat with a leader, sketch a map and record the plants and animals observed.",
+      "Use field guides to identify photographs or suitable natural specimens and label a nature notebook.",
+      "Create a nature scrapbook with sketches, bark rubbings or recorded animal footprints from supervised visits."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      170,
+      171
+    ]
+  },
+  {
+    "id": "physical-training",
+    "name": "Physical Training",
+    "category": "Electives",
+    "summary": "Build physical fitness and confidence through properly guided training, personal improvement and opportunities to lead others.",
+    "learn": [
+      "Understand training principles and the purpose of warming up and warming down.",
+      "Explore how the body responds to aerobic and anaerobic training.",
+      "Track age-appropriate personal progress and develop the ability to lead a training session."
+    ],
+    "classActivities": [
+      "Join an instructor-led session that demonstrates warm-up, training and warm-down phases.",
+      "Keep a progress log during supervised circuit or movement-training sessions.",
+      "Prepare an instructor-approved training plan and practise leading suitable activities with the group."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      172,
+      173
+    ]
+  },
+  {
+    "id": "safety",
+    "name": "Safety",
+    "category": "Electives",
+    "summary": "Learn to recognise everyday hazards, promote accident prevention and make responsible choices in physical and digital spaces.",
+    "learn": [
+      "Recognise hazards at home, school, on roads, around water and during sport.",
+      "Assess risks and communicate practical accident-prevention messages.",
+      "Explore digital citizenship, privacy, cybersecurity, cyberbullying and identity theft."
+    ],
+    "classActivities": [
+      "Discuss illustrated everyday scenarios and identify hazards and prevention measures.",
+      "Carry out an officer-guided risk assessment of the Company parade meeting place.",
+      "Prepare a school or church safety campaign, or present a researched cyber-safety topic to the group."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      174
+    ]
+  },
+  {
+    "id": "sustainability",
+    "name": "Sustainability",
+    "category": "Electives",
+    "summary": "Connect the United Nations Sustainable Development Goals with practical projects that benefit the local community.",
+    "learn": [
+      "Relate local community needs to the Sustainable Development Goals.",
+      "Plan and carry out a community project with a positive, observable impact.",
+      "Document project work and collaborate more widely at the Advanced stage."
+    ],
+    "classActivities": [
+      "Choose a local need, match it to an SDG and prepare a project plan with assigned roles.",
+      "Take part in an officer-guided community project and record sessions, contributions and outcomes.",
+      "Present the project's impact and reflections through a written report, slides or a video presentation."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      175,
+      176
+    ]
+  },
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "category": "Electives",
+    "summary": "Explore how an enterprise can address community needs, then study or develop a venture with a positive social impact.",
+    "learn": [
+      "Connect a community problem with a practical enterprise-based solution.",
+      "Consider goals, stakeholders, finances and effects on the local community.",
+      "Evaluate outcomes and reflect on learning from a social-enterprise project."
+    ],
+    "classActivities": [
+      "Research an existing social enterprise and present its goals, approach, finances and community impact.",
+      "Develop a proposed community enterprise and seek the Company Officer's approval before carrying it out.",
+      "Prepare a project presentation explaining the problem, solution, stakeholders, results and lessons learned."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      177,
+      178
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "category": "Electives",
+    "summary": "Develop sporting ability through sustained training, participation in recognised competitions and evidence of personal progress.",
+    "learn": [
+      "Understand the history, rules and wider context of a chosen sport.",
+      "Improve performance through regular training and active competition.",
+      "Progress to stronger competition or develop another eligible sport at the Advanced stage."
+    ],
+    "classActivities": [
+      "Join a coached practice session for a chosen sport other than swimming or athletics and record personal progress.",
+      "Prepare a short explanation of the sport's history, rules and competition structure.",
+      "Take part in an appropriate Company or school competition and discuss performance with the coach or officer."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      179,
+      180
+    ]
+  },
+  {
+    "id": "swimming",
+    "name": "Swimming",
+    "category": "Electives",
+    "summary": "Develop swimming technique and work towards the handbook's Basic and Advanced performance standards under qualified supervision.",
+    "learn": [
+      "Improve freestyle, breaststroke, backstroke or butterfly technique.",
+      "Understand the swimming events and performance standards used for assessment.",
+      "Build water confidence through properly supervised instruction and progression."
+    ],
+    "classActivities": [
+      "Attend a qualified-instructor-led stroke session in a supervised swimming pool.",
+      "Record progress in instructor-approved timed and distance swimming practice.",
+      "Review the relevant Basic or Advanced assessment areas and individual readiness with the swimming instructor."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      181,
+      182
+    ]
+  },
+  {
+    "id": "water-adventure",
+    "name": "Water Adventure",
+    "category": "Electives",
+    "summary": "Build skills and safety awareness in a chosen water activity, using canoeing as the handbook's example syllabus.",
+    "learn": [
+      "Understand the Swimming Award prerequisite and the emphasis on skill and water safety.",
+      "Explore canoe types, maintenance, storage and supervised craft-handling skills.",
+      "Learn about canoe camping, local access rules and progression to more advanced paddling."
+    ],
+    "classActivities": [
+      "Identify different canoe types and discuss their history, safe storage and maintenance with an instructor.",
+      "Join a qualified-instructor-led session to practise approved canoe handling and paddling skills.",
+      "Plan a canoe-camping scenario and discuss safety, local rules, access and equipment care with the instructor."
+    ],
+    "levels": [
+      "Basic Level",
+      "Advanced Level"
+    ],
+    "sourcePages": [
+      183,
+      184
+    ]
+  }
+]

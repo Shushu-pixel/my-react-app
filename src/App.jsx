@@ -7,6 +7,7 @@ const REGISTER_URL = 'https://bb2pch.github.io/';
 const BBM_URL = 'https://bbmalaysia.org/';
 const FACEBOOK_URL = 'https://www.facebook.com/bb2ndpuchong/';
 const activityIcons = [Music2, Footprints, Award, BookOpen, Compass, HeartHandshake];
+const activityPages = { drill: 'drill.html', badgework: 'badgework.html' };
 
 function Eyebrow({children, light = false}) {
   return <div className={`eyebrow ${light ? 'eyebrow-light' : ''}`}><span />{children}</div>;
@@ -110,12 +111,12 @@ function App() {
         <div className="section-title-row"><h2 id="parade-title">Not your<br/>ordinary <span className="serif-word">weekend.</span></h2><p>Every parade is a new opportunity to learn,<br className="desktop-break"/> connect and grow. Here’s a little of what we do.</p></div>
         <div className="activities-grid">{activities.map((activity,index)=>{
           const Icon = activityIcons[index%activityIcons.length];
-          const isDrill = activity.id === 'drill';
-          const Card = isDrill ? 'a' : 'button';
-          return <Card className="activity-card" key={activity.id} {...(isDrill ? {href: `${import.meta.env.BASE_URL}drill.html`} : {onClick: ()=>setDetail(activity)})}>
+          const linkedPage = activityPages[activity.id];
+          const Card = linkedPage ? 'a' : 'button';
+          return <Card className="activity-card" key={activity.id} {...(linkedPage ? {href: `${import.meta.env.BASE_URL}${linkedPage}`} : {onClick: ()=>setDetail(activity)})}>
             <div className="activity-top"><span className="activity-icon"><Icon size={24} strokeWidth={1.4}/></span><span className="activity-number">0{index+1}</span></div>
             <h3>{activity.name}</h3><p>{activity.shortDescription}</p>
-            <span className="activity-bottom">{isDrill ? 'EXPLORE DRILL' : 'A LITTLE MORE'} <ArrowUpRight size={17}/></span>
+            <span className="activity-bottom">{linkedPage ? `EXPLORE ${activity.name.toUpperCase()}` : 'A LITTLE MORE'} <ArrowUpRight size={17}/></span>
           </Card>;
         })}</div>
         <p className="parade-footnote"><span className="status-dot"/> Different activities. One journey of growth. <span>Parade arrangements are shared with members.</span></p>

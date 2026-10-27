@@ -37,6 +37,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Edit the introduction, company story, brand, and external link constants in `src/App.jsx`.
 - Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
 - Edit drill photo metadata and captions in `src/drillPhotos.js`. Original JPEGs are stored in `public/images/drill/`.
+- Edit the badgework page in `src/BadgeworkPage.jsx`, award summaries in `src/badgeworkAwards.json`, and photo metadata in `src/badgeworkPhotos.js`. The homepage Badgework card links to `badgework.html`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -49,6 +50,10 @@ The company logo supplied for this website is stored in `public/images/company-l
 The drill page displays five supplied photographs directly in a responsive gallery. Original JPEGs were downloaded from the company’s shared Drive folder and verified before saving under `public/images/drill/`. Every image displays at its natural aspect ratio with a caption; the photographs are not links and do not open a folder or lightbox.
 
 The uploaded `IMG_7749.MP4` appears above the photographs as `public/videos/drill-practice.mp4`, with native playback, volume, seeking and fullscreen controls. The H.264/AAC streams are preserved without re-encoding, and MP4 metadata is moved to the beginning for streaming. Its preview is an actual frame saved as `public/images/drill-video-poster.jpg`. The video plays inline on mobile, preloads metadata only, and does not autoplay.
+
+The badgework guide covers all 34 Senior Section proficiency awards described on pages 125–184 of the supplied November 2024 BB Malaysia Senior Member’s Handbook, including the four separate band awards. Learning summaries and suggested class activities are paraphrased from that section; they do not replace official assessment requirements or confirm a company course schedule. Each award stores its source page references.
+
+Christian Education, First Aid, and Financial Stewardship appear first. Card covers use a distinct simple line icon for each award and have no photographs. Opening an award reveals its learning information and, when available, all corresponding company photos in a cream text/photograph split layout. Eight original JPEGs are self-hosted in `public/images/badgework/`. The large First Aid `.MOV` was not included because this page’s requested media are photographs. The requested Framer module returned HTTP 403, so the page-turn animation is implemented locally without a Framer runtime dependency.
 
 The company logo, drill photographs and video, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the video. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 

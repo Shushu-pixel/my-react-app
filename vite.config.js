@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         drill: fileURLToPath(new URL('./drill.html', import.meta.url)),
+        badgework: fileURLToPath(new URL('./badgework.html', import.meta.url)),
       },
     },
   },
