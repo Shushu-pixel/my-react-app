@@ -1,0 +1,13 @@
+.floating-badge.pillar-trigger{font-size:16px;font-weight:500;min-height:56px;padding:17px 23px;gap:12px;color:#ecedf5;border-color:#c5b16c50;box-shadow:0 10px 32px #0003;white-space:nowrap;cursor:pointer;transition:border-color .2s,background .2s}
+.floating-badge.pillar-trigger svg{width:24px;height:24px;flex-shrink:0;color:#ddc578}
+.floating-badge.pillar-trigger:hover,.floating-badge.pillar-trigger:focus-visible,.floating-badge.pillar-trigger[aria-expanded=true]{animation-play-state:paused;z-index:8;border-color:#d4af37b0;background:#142644}
+.pillar-popover{position:fixed;z-index:100;box-sizing:border-box;width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:22px 24px;background:#101e35;border:1px solid #c2ab654f;border-radius:14px;color:#c1cbdc;box-shadow:0 20px 60px #02071470;font-family:var(--heading);text-align:left;animation:pillar-description-in .16s ease-out}
+.pillar-popover:before{content:'';position:absolute;left:var(--pillar-arrow-left);width:10px;height:10px;background:#101e35;border-left:1px solid #c2ab654f;border-top:1px solid #c2ab654f;transform:translateX(-50%) rotate(45deg)}
+.pillar-popover-below:before{top:-6px}
+.pillar-popover-above:before{bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+.pillar-popover strong{display:block;color:#e3ca7d;font-size:15px;font-weight:600;line-height:1.5;margin-bottom:10px}
+.pillar-popover p{font-family:'DM Sans Variable',Arial,sans-serif;font-size:13px;line-height:1.85;margin:0}
+@keyframes pillar-description-in{from{opacity:0;translate:0 4px}to{opacity:1;translate:0 0}}
+@media(max-width:760px){.floating-badge.pillar-trigger{font-size:13px;min-height:48px;padding:13px 17px;gap:9px}.floating-badge.pillar-trigger svg{width:21px;height:21px}}
+@media(max-width:480px){.floating-badge.pillar-trigger{font-size:12px;min-height:44px;padding:12px 14px;gap:8px}.floating-badge.pillar-trigger svg{width:19px;height:19px}.pillar-popover{padding:19px 20px}.pillar-popover strong{font-size:14px}.pillar-popover p{font-size:12px;line-height:1.8}}
+@media(prefers-reduced-motion:reduce){.pillar-popover{animation:none}.floating-badge.pillar-trigger{transition:none}}

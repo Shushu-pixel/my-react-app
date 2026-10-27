@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Anchor, ArrowUpRight, ArrowRight, ArrowLeft, ChevronDown, Plus, Minus, X, Menu, Music2, Footprints, Award, BookOpen, HeartHandshake, Compass, MapPin, CalendarDays, Tent, Check } from 'lucide-react';
+import { Anchor, ArrowUpRight, ArrowRight, ArrowLeft, ChevronDown, Plus, Minus, X, Menu, Music2, Footprints, Award, HeartHandshake, Compass, MapPin, CalendarDays, Tent, Check } from 'lucide-react';
 import { activities, events, faqs } from './data.js';
 import Brand from './components/Brand.jsx';
+import TwinPillars from './components/TwinPillars.jsx';
 
 const REGISTER_URL = 'https://bb2pch.github.io/';
 const BBM_URL = 'https://bbmalaysia.org/';
@@ -88,10 +89,7 @@ function App() {
         <div className="hero-visual" aria-label="A blue and gold anchor, a symbol of faith and steadfastness">
           <div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="visual-glow"/>
           <img className="anchor-art" src={`${import.meta.env.BASE_URL}images/anchor-hero.png`} alt="Royal blue and gold anchor with a rope, standing among misty mountains" fetchPriority="high"/>
-          <div className="hero-pillars" role="group" aria-label="The twin pillars of the Boys’ Brigade">
-            <span className="floating-badge badge-faith"><BookOpen size={17}/><span>Faith</span></span>
-            <span className="floating-badge badge-discipline"><Footprints size={18}/><span>Discipline</span></span>
-          </div>
+          <TwinPillars />
           <div className="hero-bottom"><span>GROW TOGETHER. GO FURTHER.</span><a href="#about" aria-label="Scroll to our company"><ChevronDown size={19}/></a><span>SURE & STEDFAST <span className="gold-star">✦</span></span></div>
         </div>
       </section>

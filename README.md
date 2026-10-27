@@ -35,6 +35,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 
 - Edit parade activities, event previews, and FAQs in `src/data.js`.
 - Edit the introduction, company story, brand, and external link constants in `src/App.jsx`.
+- Edit the floating Christian Faith and Discipline labels and their hover/tap explanations in `src/components/TwinPillars.jsx`.
 - Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
 - Edit drill photo metadata and captions in `src/drillPhotos.js`. Original JPEGs are stored in `public/images/drill/`.
 - Edit the badgework page in `src/BadgeworkPage.jsx`, award summaries in `src/badgeworkAwards.json`, and photo metadata in `src/badgeworkPhotos.js`. The homepage Badgework card links to `badgework.html`.
