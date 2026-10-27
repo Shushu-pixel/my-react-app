@@ -42,7 +42,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 
 The three event cards are **programme previews**, not confirmed scheduled events. Replace them with actual event details and dates before announcing events. Company founding dates, church sponsorship, meeting arrangements, and achievements have intentionally not been invented; add approved company history when available.
 
-The current anchor brand mark is a temporary visual identity, not a reproduction of the official company logo. The supplied Facebook-hosted logo could not be downloaded from this environment. Replace the `Brand` mark and favicon with a supplied company logo file. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
+The company logo supplied for this website is stored in `public/images/company-logo.png` and appears in the header, footer, and browser icon. It is prepared with a transparent background and displayed on a white backplate to keep the original dark outlines visible on the navy page. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
 
 All site assets and fonts are self-hosted; no API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 

@@ -9,7 +9,7 @@ const activityIcons = [Music2, Footprints, Award, BookOpen, Compass, HeartHandsh
 
 function Brand({footer = false}) {
   return <a href="#home" className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="2nd Puchong Company home">
-    <span className="brand-emblem"><Anchor strokeWidth={1.55}/><span className="emblem-star">✦</span></span>
+    <span className="brand-emblem"><img className="brand-logo" src={`${import.meta.env.BASE_URL}images/company-logo.png`} alt="2nd Puchong Company logo" width="58" height="58" loading={footer ? 'lazy' : 'eager'} decoding="async" /></span>
     <span className="brand-name">2ND PUCHONG<span>THE BOYS’ BRIGADE</span></span>
   </a>;
 }
