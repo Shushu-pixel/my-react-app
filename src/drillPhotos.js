@@ -39,12 +39,4 @@ export const drillPhotos = [
     alt: 'Members practising foot placement beside rows of yellow training markers outdoors.',
     caption: 'Building coordination through practical instruction.',
   },
-  {
-    filename: 'drill-06.jpg',
-    width: 175,
-    height: 320,
-    title: 'A team in step',
-    alt: 'A squad of uniformed Brigade members lined up together in an indoor hall.',
-    caption: 'Confidence grows when we learn and practise together.',
-  },
 ];
