@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { Anchor, ArrowUpRight, ArrowRight, ArrowLeft, ChevronDown, Plus, Minus, X, Menu, Music2, Footprints, Award, BookOpen, HeartHandshake, Compass, MapPin, CalendarDays, Sparkles, Check } from 'lucide-react';
+import { Anchor, ArrowUpRight, ArrowRight, ArrowLeft, ChevronDown, Plus, Minus, X, Menu, Music2, Footprints, Award, BookOpen, HeartHandshake, Compass, MapPin, CalendarDays, Tent, Check } from 'lucide-react';
 import { activities, events, faqs } from './data.js';
 import Brand from './components/Brand.jsx';
 
 const REGISTER_URL = 'https://bb2pch.github.io/';
 const BBM_URL = 'https://bbmalaysia.org/';
 const FACEBOOK_URL = 'https://www.facebook.com/bb2ndpuchong/';
-const activityIcons = [Music2, Footprints, Award, BookOpen, Compass, HeartHandshake];
+const activityIcons = { worship: Music2, drill: Footprints, badgework: Award, camp: Tent, fellowship: Compass, service: HeartHandshake };
 const activityPages = { drill: 'drill.html', badgework: 'badgework.html' };
 
 function Eyebrow({children, light = false}) {
@@ -88,15 +88,15 @@ function App() {
         <div className="hero-visual" aria-label="A blue and gold anchor, a symbol of faith and steadfastness">
           <div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="visual-glow"/>
           <img className="anchor-art" src={`${import.meta.env.BASE_URL}images/anchor-hero.png`} alt="Royal blue and gold anchor with a rope, standing among misty mountains" fetchPriority="high"/>
-          <span className="floating-badge badge-faith"><BookOpen size={17}/><span>Faith that guides.</span></span>
-          <span className="floating-badge badge-friends"><HeartHandshake size={18}/><span>Friendships that last.</span></span>
-          <span className="floating-badge badge-adventure"><Compass size={18}/><span>Adventure that shapes.</span></span>
-          <span className="floating-badge badge-purpose"><Sparkles size={17}/><span>A purpose to live for.</span></span>
+          <div className="hero-pillars" role="group" aria-label="The twin pillars of the Boys’ Brigade">
+            <span className="floating-badge badge-faith"><BookOpen size={17}/><span>Faith</span></span>
+            <span className="floating-badge badge-discipline"><Footprints size={18}/><span>Discipline</span></span>
+          </div>
           <div className="hero-bottom"><span>GROW TOGETHER. GO FURTHER.</span><a href="#about" aria-label="Scroll to our company"><ChevronDown size={19}/></a><span>SURE & STEDFAST <span className="gold-star">✦</span></span></div>
         </div>
       </section>
 
-      <div className="values-strip" aria-label="Our values"><span>FAITH</span><span className="strip-star">✦</span><span>FRIENDSHIP</span><span className="strip-star">✦</span><span>DISCIPLINE</span><span className="strip-star">✦</span><span>ADVENTURE</span><span className="strip-star">✦</span><span>SERVICE</span><span className="strip-star">✦</span><span>LEADERSHIP</span></div>
+      <div className="values-strip" role="group" tabIndex={0} aria-label="Our values"><span>FRIENDSHIP</span><span className="strip-star">✦</span><span>DISCIPLINE</span><span className="strip-star">✦</span><span>CHRISTIAN FAITH</span><span className="strip-star">✦</span><span>ADVENTURE</span><span className="strip-star">✦</span><span>SERVICE</span><span className="strip-star">✦</span><span>LEADERSHIP</span></div>
 
       <section className="about-section section-shell" id="about" aria-labelledby="about-title">
         <div className="section-heading"><Eyebrow>MORE THAN A UNIFORM</Eyebrow><span className="section-index">01 / OUR COMPANY</span></div>
@@ -110,7 +110,7 @@ function App() {
         <div className="section-heading"><Eyebrow>A LITTLE OF EVERYTHING. A LOT TO BECOME.</Eyebrow><span className="section-index">02 / PARADE LIFE</span></div>
         <div className="section-title-row"><h2 id="parade-title">Not your<br/>ordinary <span className="serif-word">weekend.</span></h2><p>Every parade is a new opportunity to learn,<br className="desktop-break"/> connect and grow. Here’s a little of what we do.</p></div>
         <div className="activities-grid">{activities.map((activity,index)=>{
-          const Icon = activityIcons[index%activityIcons.length];
+          const Icon = activityIcons[activity.id] || Award;
           const linkedPage = activityPages[activity.id];
           const Card = linkedPage ? 'a' : 'button';
           return <Card className="activity-card" key={activity.id} {...(linkedPage ? {href: `${import.meta.env.BASE_URL}${linkedPage}`} : {onClick: ()=>setDetail(activity)})}>
