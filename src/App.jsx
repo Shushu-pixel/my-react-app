@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Anchor, ArrowUpRight, ArrowRight, ArrowLeft, ChevronDown, Plus, Minus, X, Menu, Music2, Footprints, Award, BookOpen, HeartHandshake, Compass, MapPin, CalendarDays, Sparkles, Check } from 'lucide-react';
 import { activities, events, faqs } from './data.js';
+import Brand from './components/Brand.jsx';
 
 const REGISTER_URL = 'https://bb2pch.github.io/';
 const BBM_URL = 'https://bbmalaysia.org/';
 const FACEBOOK_URL = 'https://www.facebook.com/bb2ndpuchong/';
 const activityIcons = [Music2, Footprints, Award, BookOpen, Compass, HeartHandshake];
-
-function Brand({footer = false}) {
-  return <a href="#home" className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="2nd Puchong Company home">
-    <span className="brand-emblem"><img className="brand-logo" src={`${import.meta.env.BASE_URL}images/company-logo.png`} alt="2nd Puchong Company logo" width="58" height="58" loading={footer ? 'lazy' : 'eager'} decoding="async" /></span>
-    <span className="brand-name">2ND PUCHONG<span>THE BOYS’ BRIGADE</span></span>
-  </a>;
-}
 
 function Eyebrow({children, light = false}) {
   return <div className={`eyebrow ${light ? 'eyebrow-light' : ''}`}><span />{children}</div>;
@@ -114,7 +108,16 @@ function App() {
       <section className="parade-section" id="parade" aria-labelledby="parade-title"><div className="section-shell">
         <div className="section-heading"><Eyebrow>A LITTLE OF EVERYTHING. A LOT TO BECOME.</Eyebrow><span className="section-index">02 / PARADE LIFE</span></div>
         <div className="section-title-row"><h2 id="parade-title">Not your<br/>ordinary <span className="serif-word">weekend.</span></h2><p>Every parade is a new opportunity to learn,<br className="desktop-break"/> connect and grow. Here’s a little of what we do.</p></div>
-        <div className="activities-grid">{activities.map((activity,index)=>{const Icon = activityIcons[index%activityIcons.length];return <button className="activity-card" key={activity.id} onClick={()=>setDetail(activity)}><div className="activity-top"><span className="activity-icon"><Icon size={24} strokeWidth={1.4}/></span><span className="activity-number">0{index+1}</span></div><h3>{activity.name}</h3><p>{activity.shortDescription}</p><span className="activity-bottom">A LITTLE MORE <ArrowUpRight size={17}/></span></button>;})}</div>
+        <div className="activities-grid">{activities.map((activity,index)=>{
+          const Icon = activityIcons[index%activityIcons.length];
+          const isDrill = activity.id === 'drill';
+          const Card = isDrill ? 'a' : 'button';
+          return <Card className="activity-card" key={activity.id} {...(isDrill ? {href: `${import.meta.env.BASE_URL}drill.html`} : {onClick: ()=>setDetail(activity)})}>
+            <div className="activity-top"><span className="activity-icon"><Icon size={24} strokeWidth={1.4}/></span><span className="activity-number">0{index+1}</span></div>
+            <h3>{activity.name}</h3><p>{activity.shortDescription}</p>
+            <span className="activity-bottom">{isDrill ? 'EXPLORE DRILL' : 'A LITTLE MORE'} <ArrowUpRight size={17}/></span>
+          </Card>;
+        })}</div>
         <p className="parade-footnote"><span className="status-dot"/> Different activities. One journey of growth. <span>Parade arrangements are shared with members.</span></p>
       </div></section>
 

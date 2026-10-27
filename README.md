@@ -35,6 +35,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 
 - Edit parade activities, event previews, and FAQs in `src/data.js`.
 - Edit the introduction, company story, brand, and external link constants in `src/App.jsx`.
+- Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -44,7 +45,9 @@ The three event cards are **programme previews**, not confirmed scheduled events
 
 The company logo supplied for this website is stored in `public/images/company-logo.png` and appears in the header, footer, and browser icon. It is prepared with a transparent background and displayed on a white backplate to keep the original dark outlines visible on the navy page. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
 
-All site assets and fonts are self-hosted; no API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
+The drill page embeds the shared Google Drive folder <https://drive.google.com/drive/folders/1Rto7prTaNsjLz9HXc0dWUKUxuw7tA3Yj?usp=sharing> as a photos-and-videos gallery. The files remain on Google Drive and are not copied into the repository. For public viewing without sign-in, the folder and files must allow **Anyone with the link → Viewer**. A visible full-album link provides an alternative to the embedded gallery. Google Drive requests are blocked by this development environment’s egress policy, so the actual file contents and public playback could not be verified here.
+
+The company logo, hero illustration, and fonts are self-hosted. The drill gallery requires Google Drive access in the visitor’s browser. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 
 ## Validation
 

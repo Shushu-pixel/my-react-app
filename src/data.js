@@ -13,7 +13,7 @@ export const activities = [
     name: 'Drill',
     eyebrow: 'Move as one',
     shortDescription: 'Build confidence, discipline, and a stronger team.',
-    description: 'Every step counts. From learning the basics to moving confidently as a squad, drill teaches us to listen carefully, take pride in our effort, and work together.',
+    description: 'Boys’ Brigade drill teaches members discipline, teamwork, and obedience by following commands correctly.',
     learnings: ['Teamwork and coordination', 'Focus and discipline', 'Confidence and leadership'],
     duration: 'Learning step by step',
   },
