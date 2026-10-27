@@ -36,6 +36,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Edit parade activities, event previews, and FAQs in `src/data.js`.
 - Edit the introduction, company story, brand, and external link constants in `src/App.jsx`.
 - Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
+- Edit drill photo metadata and captions in `src/drillPhotos.js`. Original JPEGs are stored in `public/images/drill/`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -45,9 +46,9 @@ The three event cards are **programme previews**, not confirmed scheduled events
 
 The company logo supplied for this website is stored in `public/images/company-logo.png` and appears in the header, footer, and browser icon. It is prepared with a transparent background and displayed on a white backplate to keep the original dark outlines visible on the navy page. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
 
-The drill page embeds the shared Google Drive folder <https://drive.google.com/drive/folders/1Rto7prTaNsjLz9HXc0dWUKUxuw7tA3Yj?usp=sharing> as a photos-and-videos gallery. The files remain on Google Drive and are not copied into the repository. For public viewing without sign-in, the folder and files must allow **Anyone with the link → Viewer**. A visible full-album link provides an alternative to the embedded gallery. Google Drive requests are blocked by this development environment’s egress policy, so the actual file contents and public playback could not be verified here.
+The drill page displays the six supplied photographs directly in a responsive gallery. Original JPEGs were downloaded from the company’s shared Drive folder and verified before saving under `public/images/drill/`. Every image displays at its natural aspect ratio with a caption; the photographs are not links and do not open a folder or lightbox. The source folder currently contains six JPEGs and no video files.
 
-The company logo, hero illustration, and fonts are self-hosted. The drill gallery requires Google Drive access in the visitor’s browser. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
+The company logo, drill photographs, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 
 ## Validation
 

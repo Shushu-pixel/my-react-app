@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check,
-  Footprints, Image, Menu, ShieldCheck, Sparkles, Users, X,
+  Footprints, Menu, ShieldCheck, Sparkles, Users, X,
 } from 'lucide-react';
 import Brand from './components/Brand.jsx';
+import { drillPhotos } from './drillPhotos.js';
 
 const REGISTER_URL = 'https://bb2pch.github.io/';
-const ALBUM_URL = 'https://drive.google.com/drive/folders/1Rto7prTaNsjLz9HXc0dWUKUxuw7tA3Yj?usp=sharing';
-const EMBED_URL = 'https://drive.google.com/embeddedfolderview?id=1Rto7prTaNsjLz9HXc0dWUKUxuw7tA3Yj#grid';
 
 const lessons = [
   {
@@ -66,7 +65,7 @@ export default function DrillPage({ homeHref = './' }) {
         <nav id="drill-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Drill navigation">
           <a href="#overview" onClick={closeMenu}>Overview</a>
           <a href="#learning" onClick={closeMenu}>What we learn</a>
-          <a href="#media" onClick={closeMenu}>Photos & videos</a>
+          <a href="#media" onClick={closeMenu}>Drill photos</a>
           <a className="mobile-join" href={REGISTER_URL} target="_blank" rel="noreferrer">Join us <ArrowUpRight size={14} /></a>
         </nav>
         <a className="header-join" href={REGISTER_URL} target="_blank" rel="noreferrer">Join the company <ArrowUpRight size={15} /></a>
@@ -86,7 +85,7 @@ export default function DrillPage({ homeHref = './' }) {
             <p>More than marching. Drill builds discipline, teamwork, and the confidence to move forward together.</p>
             <div className="drill-hero-actions">
               <a className="button button-gold" href="#learning">What we learn <ArrowDown size={17} /></a>
-              <a className="button button-outline" href="#media">Photos & videos <ArrowRight size={17} /></a>
+              <a className="button button-outline" href="#media">See drill photos <ArrowRight size={17} /></a>
             </div>
           </div>
           <div className="drill-formation" aria-hidden="true">
@@ -123,18 +122,19 @@ export default function DrillPage({ homeHref = './' }) {
       </section>
 
       <section id="media" className="drill-media section-shell" aria-labelledby="drill-media-title">
-        <div className="drill-section-top"><DrillEyebrow>OUR DRILL ALBUM</DrillEyebrow><span className="drill-section-index">02 / PHOTOS & VIDEOS</span></div>
-        <div className="drill-media-heading"><div><h2 id="drill-media-title">See us <span>in step.</span></h2><p>Explore our shared photo and video album.<br />Open an item to view a photo or play a video.</p></div><a className="button button-outline" href={ALBUM_URL} target="_blank" rel="noreferrer">Open full album <ArrowUpRight size={17} /></a></div>
-        <div className="drill-album-frame">
-          <div className="drill-album-bar"><span><Image size={16} />DRILL · PHOTOS & VIDEOS</span><a href={ALBUM_URL} target="_blank" rel="noreferrer">VIEW IN GOOGLE DRIVE <ArrowUpRight size={13} /></a></div>
-          <iframe className="drill-album-embed" src={EMBED_URL} title="2nd Puchong Company drill photos and videos on Google Drive" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allow="fullscreen" allowFullScreen />
+        <div className="drill-section-top"><DrillEyebrow>OUR COMPANY IN ACTION</DrillEyebrow><span className="drill-section-index">02 / DRILL PHOTOS</span></div>
+        <div className="drill-media-heading"><div><h2 id="drill-media-title">See us <span>in step.</span></h2><p>Discipline, teamwork and confidence, one parade at a time.<br />A few moments from drill with our company.</p></div></div>
+        <div className="drill-photo-gallery">
+          {drillPhotos.map((photo, index) => <figure className="drill-photo" key={photo.filename}>
+            <img className="drill-photo-image" src={`${import.meta.env.BASE_URL}images/drill/${photo.filename}`} width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
+            <figcaption className="drill-photo-caption"><span className="drill-photo-number">{String(index + 1).padStart(2, '0')}</span><div><h3>{photo.title}</h3><p>{photo.caption}</p></div></figcaption>
+          </figure>)}
         </div>
-        <p className="drill-album-help">Album not displaying? <a href={ALBUM_URL} target="_blank" rel="noreferrer">Open the full album in Google Drive <ArrowUpRight size={13} /></a></p>
       </section>
 
       <section className="drill-invitation section-shell" aria-labelledby="drill-invitation-title"><div className="drill-invitation-panel"><div><DrillEyebrow>TAKE YOUR FIRST STEP</DrillEyebrow><h2 id="drill-invitation-title">There’s a place<br />in the team <span>for you.</span></h2><p>Boys and girls aged 9–19. No experience needed.<br />Come ready to learn. We’ll grow together.</p></div><a className="button button-gold" href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={18} /></a></div></section>
     </main>
 
-    <footer className="site-footer drill-footer"><div className="section-shell"><div className="drill-footer-top"><div><Brand footer homeHref={homeHref} /><p>Building character. Growing faith.<br />Moving forward, together.</p></div><div className="drill-footer-links"><a href={homeHref}><ArrowLeft size={15} />Back to our company</a><a href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={15} /></a><a href={ALBUM_URL} target="_blank" rel="noreferrer">Open drill album <ArrowUpRight size={15} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} 2ND PUCHONG COMPANY.</span><span>BOYS & GIRLS, AGED 9–19. ALL ARE WELCOME.</span><a href="#drill-top">BACK TO TOP ↑</a></div></div></footer>
+    <footer className="site-footer drill-footer"><div className="section-shell"><div className="drill-footer-top"><div><Brand footer homeHref={homeHref} /><p>Building character. Growing faith.<br />Moving forward, together.</p></div><div className="drill-footer-links"><a href={homeHref}><ArrowLeft size={15} />Back to our company</a><a href={REGISTER_URL} target="_blank" rel="noreferrer">Registration & orders <ArrowUpRight size={15} /></a><a href="#media">Drill photos <ArrowRight size={15} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} 2ND PUCHONG COMPANY.</span><span>BOYS & GIRLS, AGED 9–19. ALL ARE WELCOME.</span><a href="#drill-top">BACK TO TOP ↑</a></div></div></footer>
   </>;
 }
