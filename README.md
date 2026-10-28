@@ -33,7 +33,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 
 ## Content and links
 
-- Edit parade activities, event previews, and FAQs in `src/data.js`.
+- Edit parade activities, event announcements, and FAQs in `src/data.js`. Event records control card dates and artwork, detail paragraphs, optional date/time/fee/venue facts, and their own action links.
 - Edit the introduction, company story, brand, and external link constants in `src/App.jsx`.
 - Edit the floating Christian Faith and Discipline labels and their hover/tap explanations in `src/components/TwinPillars.jsx`.
 - Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
@@ -44,7 +44,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
 - Company Facebook: <https://www.facebook.com/bb2ndpuchong/>
 
-The three event cards are **programme previews**, not confirmed scheduled events. Replace them with actual event details and dates before announcing events. Company founding dates, church sponsorship, meeting arrangements, and achievements have intentionally not been invented; add approved company history when available.
+The three announcement cards show company-supplied information: Thanksgiving & Awards Day on **21 November 2026, 2:00 PM–8:00 PM**, at **Logos Presbyterian Church Puchong**, with a **RM15 fee including dinner** and its [event registration link](https://bb2pch.github.io/events/?e=EV-261023-734); **no parade throughout December 2026**, with the 2027 restart date awaiting a company announcement; and a **Stay tuned** placeholder for the next unannounced event. Only the Thanksgiving card offers event registration. Company founding dates, church sponsorship, and achievements have intentionally not been invented; add approved company history when available.
 
 The company logo supplied for this website is stored in `public/images/company-logo.png` and appears in the header, footer, and browser icon. It is prepared with a transparent background and displayed on a white backplate to keep the original dark outlines visible on the navy page. The hero anchor illustration was generated for this website and is stored locally in `public/images/anchor-hero.png`.
 
