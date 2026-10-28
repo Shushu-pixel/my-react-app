@@ -90,8 +90,8 @@ export const events = [
     paragraphs: ['Parades will resume in 2027 on a date to be announced. Please look out for our next company announcement for the starting date.'],
     date: 'All of December 2026',
     note: 'The 2027 parade restart date has not yet been confirmed.',
-    actionLabel: 'Follow company updates',
-    actionUrl: 'https://www.facebook.com/bb2ndpuchong/',
+    actionLabel: 'Follow on Instagram',
+    actionUrl: 'https://www.instagram.com/bb2ndpuchong/reels/',
   },
   {
     id: 'stay-tuned',
@@ -103,8 +103,8 @@ export const events = [
     tagline: 'THE NEXT CHAPTER IS ON ITS WAY.',
     description: 'Our next event has not been announced yet. Stay tuned for the date, venue, and details!',
     date: 'Date to be announced',
-    actionLabel: 'Follow company updates',
-    actionUrl: 'https://www.facebook.com/bb2ndpuchong/',
+    actionLabel: 'Follow on Instagram',
+    actionUrl: 'https://www.instagram.com/bb2ndpuchong/reels/',
   },
 ];
 
@@ -115,7 +115,7 @@ export const faqs = [
   },
   {
     question: 'Can I join without any experience?',
-    answer: 'Yes. Boys and girls aged 9–19 are welcome, and you do not need previous Brigade experience. We all start somewhere. Contact the company through our Facebook page to ask about joining and what to expect at your first parade.',
+    answer: 'Yes. Boys and girls aged 9–19 are welcome, and you do not need previous Brigade experience. We all start somewhere. Contact the company through our Instagram page to ask about joining and what to expect at your first parade.',
   },
   {
     question: 'What ages can join the company?',

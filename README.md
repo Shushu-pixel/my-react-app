@@ -42,7 +42,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
-- Company Facebook: <https://www.facebook.com/bb2ndpuchong/>
+- Company Instagram: <https://www.instagram.com/bb2ndpuchong/reels/>
 
 The three announcement cards show company-supplied information: Thanksgiving & Awards Day on **21 November 2026, 2:00 PM–8:00 PM**, at **Logos Presbyterian Church Puchong**, with a **RM15 fee including dinner** and its [event registration link](https://bb2pch.github.io/events/?e=EV-261023-734); **no parade throughout December 2026**, with the 2027 restart date awaiting a company announcement; and a **Stay tuned** placeholder for the next unannounced event. Only the Thanksgiving card offers event registration. Company founding dates, church sponsorship, and achievements have intentionally not been invented; add approved company history when available.
 
