@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { ArrowDown, ArrowLeft, ArrowUpRight, Camera, Film, Instagram, Menu, X } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ArrowDown, ArrowLeft, ArrowUpRight, Instagram, Menu, X } from 'lucide-react';
 import Brand from './components/Brand.jsx';
 import gamesMedia from './gamesMedia.json';
 
@@ -19,12 +19,6 @@ function interleaveMedia(media) {
   return result.concat(videos.slice(videoIndex));
 }
 
-function formatDuration(seconds) {
-  if (typeof seconds !== 'number' || !Number.isFinite(seconds) || seconds <= 0) return null;
-  const rounded = Math.floor(seconds);
-  return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, '0')}`;
-}
-
 const galleryMedia = interleaveMedia(gamesMedia);
 const photoCount = galleryMedia.filter((item) => item.type === 'photo').length;
 const videoCount = galleryMedia.filter((item) => item.type === 'video').length;
@@ -38,6 +32,146 @@ function GamesEyebrow({ children }) {
   return <div className="games-eyebrow"><span />{children}</div>;
 }
 
+function isHalfInViewport(video) {
+  const rect = video.getBoundingClientRect();
+  const width = Math.max(0, Math.min(rect.right, window.innerWidth) - Math.max(rect.left, 0));
+  const height = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+  return rect.width > 0 && rect.height > 0 && width * height / (rect.width * rect.height) >= 0.5;
+}
+
+function ViewportVideo({ item, registerVideo, onAudiblePlayback }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    registerVideo(item.id, video);
+    let active = true;
+    let visible = false;
+    let manuallyPaused = false;
+    let expectedPauses = 0;
+    let playPending = false;
+    let revision = 0;
+
+    const canPlay = () => active && video.isConnected && visible && !document.hidden && !manuallyPaused && isHalfInViewport(video);
+    const pauseForVisibility = () => {
+      if (!video.paused) {
+        expectedPauses += 1;
+        video.pause();
+      }
+    };
+    const playWhenVisible = () => {
+      if (!canPlay() || video.ended || !video.paused || playPending) return;
+      playPending = true;
+      const attemptedRevision = revision;
+      let playback;
+      try {
+        playback = video.play();
+      } catch {
+        playPending = false;
+        return;
+      }
+      Promise.resolve(playback)
+        .then(() => {
+          // A play request can finish after scrolling, filtering, or hiding the page.
+          if (!canPlay()) pauseForVisibility();
+        })
+        .catch(() => {
+          // Native controls remain usable when the browser declines autoplay.
+        })
+        .finally(() => {
+          playPending = false;
+          // Retry only after a real visibility change, never in a rejection loop.
+          if (active && revision !== attemptedRevision) playWhenVisible();
+        });
+    };
+    const updateVisibility = (nextVisible) => {
+      if (nextVisible === visible) return;
+      visible = nextVisible;
+      revision += 1;
+      if (visible) {
+        manuallyPaused = false;
+        playWhenVisible();
+      } else pauseForVisibility();
+    };
+    const onPause = () => {
+      if (expectedPauses > 0) {
+        expectedPauses -= 1;
+        return;
+      }
+      if (active && visible && !document.hidden && !video.ended) {
+        manuallyPaused = true;
+        revision += 1;
+      }
+    };
+    const onPlay = () => {
+      // Ignore a queued play event if the user has already paused the clip.
+      if (video.paused) return;
+      if (!active || !video.isConnected || !visible || document.hidden || !isHalfInViewport(video)) {
+        pauseForVisibility();
+        return;
+      }
+      manuallyPaused = false;
+      onAudiblePlayback(video);
+    };
+    const onVolumeChange = () => {
+      if (!video.paused) onAudiblePlayback(video);
+    };
+    const onVisibilityChange = () => {
+      revision += 1;
+      if (document.hidden) pauseForVisibility();
+      else {
+        if (visible && !isHalfInViewport(video)) visible = false;
+        playWhenVisible();
+      }
+    };
+
+    video.addEventListener('pause', onPause);
+    video.addEventListener('play', onPlay);
+    video.addEventListener('volumechange', onVolumeChange);
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    const observer = typeof IntersectionObserver === 'function'
+      ? new IntersectionObserver((entries) => {
+        if (!active) return;
+        entries.forEach((entry) => updateVisibility(entry.isIntersecting && entry.intersectionRatio >= 0.5));
+      }, { threshold: [0, 0.5] })
+      : null;
+    const checkViewport = () => updateVisibility(isHalfInViewport(video));
+    if (observer) observer.observe(video);
+    else {
+      window.addEventListener('scroll', checkViewport, { passive: true });
+      window.addEventListener('resize', checkViewport);
+      checkViewport();
+    }
+
+    return () => {
+      active = false;
+      observer?.disconnect();
+      window.removeEventListener('scroll', checkViewport);
+      window.removeEventListener('resize', checkViewport);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      video.removeEventListener('pause', onPause);
+      video.removeEventListener('play', onPlay);
+      video.removeEventListener('volumechange', onVolumeChange);
+      registerVideo(item.id, null);
+      if (!video.paused) video.pause();
+    };
+  }, [item.id, registerVideo, onAudiblePlayback]);
+
+  return <video
+    ref={videoRef}
+    src={assetUrl(item.src)}
+    poster={item.poster ? assetUrl(item.poster) : undefined}
+    width={item.width}
+    height={item.height}
+    controls
+    playsInline
+    muted
+    preload="none"
+    aria-label={item.alt || item.title}
+  >Your browser cannot play this video.</video>;
+}
+
 export default function GamesPage({ homeHref = './' }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState('all');
@@ -45,15 +179,20 @@ export default function GamesPage({ homeHref = './' }) {
   const videos = useRef(new Map());
   const visibleMedia = filter === 'all' ? galleryMedia : galleryMedia.filter((item) => item.type === filter);
 
-  const pauseVideos = (except = null) => {
+  const registerVideo = useCallback((id, node) => {
+    if (node) videos.current.set(id, node);
+    else videos.current.delete(id);
+  }, []);
+
+  const onAudiblePlayback = useCallback((playingVideo) => {
+    if (playingVideo.muted || playingVideo.volume === 0) return;
     videos.current.forEach((video) => {
-      if (video !== except && !video.paused) video.pause();
+      if (video !== playingVideo && !video.paused) video.pause();
     });
-  };
+  }, []);
 
   const selectFilter = (nextFilter) => {
     if (nextFilter === filter) return;
-    pauseVideos();
     setFilter(nextFilter);
   };
 
@@ -67,12 +206,6 @@ export default function GamesPage({ homeHref = './' }) {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [menuOpen]);
-
-  useEffect(() => () => {
-    videos.current.forEach((video) => {
-      if (!video.paused) video.pause();
-    });
-  }, []);
 
   const showingLabel = filter === 'all'
     ? `Showing all ${visibleMedia.length} moments.`
@@ -115,30 +248,11 @@ export default function GamesPage({ homeHref = './' }) {
         <div className="games-gallery-grid" id="games-gallery-grid">
           {visibleMedia.map((item, index) => {
             const isVideo = item.type === 'video';
-            const duration = isVideo ? formatDuration(item.duration) : null;
-            return <article className={`games-media-card${isVideo ? ' games-media-card-video' : ''}`} data-media-type={item.type} key={item.id} aria-labelledby={`games-media-title-${item.id}`}>
+            return <article className={`games-media-card${isVideo ? ' games-media-card-video' : ''}`} data-media-type={item.type} key={item.id} aria-label={item.title}>
               <figure className="games-media-figure">
                 <div className="games-media-visual">
-                  {isVideo ? <video
-                    ref={(node) => {
-                      if (node) videos.current.set(item.id, node);
-                      else videos.current.delete(item.id);
-                    }}
-                    src={assetUrl(item.src)}
-                    poster={item.poster ? assetUrl(item.poster) : undefined}
-                    width={item.width}
-                    height={item.height}
-                    controls
-                    playsInline
-                    preload="none"
-                    aria-labelledby={`games-media-title-${item.id}`}
-                    onPlay={(event) => pauseVideos(event.currentTarget)}
-                  >Your browser cannot play this video.</video> : <img className="games-media-image" src={assetUrl(item.src)} width={item.width} height={item.height} alt={item.alt} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />}
+                  {isVideo ? <ViewportVideo item={item} registerVideo={registerVideo} onAudiblePlayback={onAudiblePlayback} /> : <img className="games-media-image" src={assetUrl(item.src)} width={item.width} height={item.height} alt={item.alt} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />}
                 </div>
-                <figcaption className="games-media-caption">
-                  <div className="games-media-kind"><span>{isVideo ? <Film size={13} aria-hidden="true" /> : <Camera size={13} aria-hidden="true" />}{isVideo ? 'VIDEO' : 'PHOTO'}</span>{duration && <span className="games-media-duration">{duration}</span>}</div>
-                  <h3 id={`games-media-title-${item.id}`}>{item.title}</h3>
-                </figcaption>
               </figure>
             </article>;
           })}
