@@ -132,14 +132,12 @@ export default function GamesPage({ homeHref = './' }) {
                     playsInline
                     preload="none"
                     aria-labelledby={`games-media-title-${item.id}`}
-                    aria-describedby={`games-media-caption-${item.id}`}
                     onPlay={(event) => pauseVideos(event.currentTarget)}
                   >Your browser cannot play this video.</video> : <img className="games-media-image" src={assetUrl(item.src)} width={item.width} height={item.height} alt={item.alt} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />}
                 </div>
                 <figcaption className="games-media-caption">
                   <div className="games-media-kind"><span>{isVideo ? <Film size={13} aria-hidden="true" /> : <Camera size={13} aria-hidden="true" />}{isVideo ? 'VIDEO' : 'PHOTO'}</span>{duration && <span className="games-media-duration">{duration}</span>}</div>
                   <h3 id={`games-media-title-${item.id}`}>{item.title}</h3>
-                  <p id={`games-media-caption-${item.id}`}>{item.caption}</p>
                 </figcaption>
               </figure>
             </article>;
