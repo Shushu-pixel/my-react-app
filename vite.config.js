@@ -13,6 +13,7 @@ export default defineConfig({
         drill: fileURLToPath(new URL('./drill.html', import.meta.url)),
         badgework: fileURLToPath(new URL('./badgework.html', import.meta.url)),
         camp: fileURLToPath(new URL('./camp.html', import.meta.url)),
+        games: fileURLToPath(new URL('./games.html', import.meta.url)),
       },
     },
   },

@@ -40,6 +40,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Edit drill photo metadata and captions in `src/drillPhotos.js`. Original JPEGs are stored in `public/images/drill/`.
 - Edit the badgework page in `src/BadgeworkPage.jsx`, award summaries in `src/badgeworkAwards.json`, and photo metadata in `src/badgeworkPhotos.js`. The homepage Badgework card links to `badgework.html`.
 - Edit the camp page in `src/CampPage.jsx`, its 16 stories in `src/campStories.js`, and photo metadata in `src/campPhotos.json`. The homepage Camp card links to `camp.html`.
+- Edit the games page in `src/GamesPage.jsx` and its photo/video metadata in `src/gamesMedia.json`. The homepage Games & fellowship card links to `games.html`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -59,10 +60,14 @@ Christian Education, First Aid, and Financial Stewardship appear first. Card cov
 
 The camp page pairs all 16 company-supplied photographs with their corresponding stories, in the supplied order. Text and photos alternate sides on desktop, starting with text on the left; on phones each story stacks above its photograph. Photos show directly at their natural aspect ratios without cropping, links, or a lightbox. Original images are stored in `public/images/camp/`, and their source Drive URLs are recorded in the photo metadata. The page describes camp experiences; it does not announce a date for a future camp.
 
-The company logo, drill and badgework photographs, camp photographs, drill video, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the video. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
+The games page displays all 11 photos and four videos supplied through the games Drive folder in a responsive photo-and-video grid. All, Photos, and Videos filters help visitors browse. Photos remain visible directly, and videos have native inline controls with no autoplay. Each video has a poster extracted from its actual footage and uses `preload="none"` to avoid loading video data before playback. Starting another video or changing filters pauses playback. Original photos are stored in `public/images/games/`; compatible H.264/AAC videos are remuxed without re-encoding to `public/videos/games/`, with streaming metadata at the start. Source Drive URLs are recorded in the media metadata. The Framer reference returned HTTP 403; the user approved a local gallery implementation in the company’s navy and gold colours.
+
+The company logo, drill and badgework photographs, camp and games media, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the videos. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 
 ## Validation
 
 Verified with a production build and Chromium browser checks at desktop and mobile sizes. Checks cover the fan carousel (arrows, indicators, card selection, touch swipes), activity and event dialogs, Escape and keyboard focus handling, FAQ expansion, mobile navigation, destination URLs, and horizontal overflow. The external sites themselves remain subject to network availability.
 
 Camp checks also cover all 16 photo/story pairings, alternating desktop rows, mobile text-first stacking, image aspect ratios, and navigation under a GitHub Pages project path.
+
+Games checks cover all 15 media items, all three filters, photo aspect ratios, zero video requests before playback, playback and seeking for every clip, pausing other clips and on filter changes, mobile touch navigation, and HTTP range streaming under the project path.
