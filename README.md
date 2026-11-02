@@ -39,6 +39,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Edit the drill page and its five learning descriptions in `src/DrillPage.jsx`. The homepage Drill card links to `drill.html`.
 - Edit drill photo metadata and captions in `src/drillPhotos.js`. Original JPEGs are stored in `public/images/drill/`.
 - Edit the badgework page in `src/BadgeworkPage.jsx`, award summaries in `src/badgeworkAwards.json`, and photo metadata in `src/badgeworkPhotos.js`. The homepage Badgework card links to `badgework.html`.
+- Edit the camp page in `src/CampPage.jsx`, its 16 stories in `src/campStories.js`, and photo metadata in `src/campPhotos.json`. The homepage Camp card links to `camp.html`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -56,8 +57,12 @@ The badgework guide covers all 34 Senior Section proficiency awards described on
 
 Christian Education, First Aid, and Financial Stewardship appear first. Card covers use a distinct simple line icon for each award and have no photographs. Opening an award reveals its learning information and, when available, all corresponding company photos in a cream text/photograph split layout. Eight original JPEGs are self-hosted in `public/images/badgework/`. The large First Aid `.MOV` was not included because this page’s requested media are photographs. The requested Framer module returned HTTP 403, so the page-turn animation is implemented locally without a Framer runtime dependency.
 
-The company logo, drill photographs and video, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the video. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
+The camp page pairs all 16 company-supplied photographs with their corresponding stories, in the supplied order. Text and photos alternate sides on desktop, starting with text on the left; on phones each story stacks above its photograph. Photos show directly at their natural aspect ratios without cropping, links, or a lightbox. Original images are stored in `public/images/camp/`, and their source Drive URLs are recorded in the photo metadata. The page describes camp experiences; it does not announce a date for a future camp.
+
+The company logo, drill and badgework photographs, camp photographs, drill video, hero illustration, and fonts are self-hosted. Visitors need no Google Drive access or sign-in to view the photographs or play the video. No API keys, backend, or extra environment variables are needed. External destinations open in new tabs.
 
 ## Validation
 
 Verified with a production build and Chromium browser checks at desktop and mobile sizes. Checks cover the fan carousel (arrows, indicators, card selection, touch swipes), activity and event dialogs, Escape and keyboard focus handling, FAQ expansion, mobile navigation, destination URLs, and horizontal overflow. The external sites themselves remain subject to network availability.
+
+Camp checks also cover all 16 photo/story pairings, alternating desktop rows, mobile text-first stacking, image aspect ratios, and navigation under a GitHub Pages project path.

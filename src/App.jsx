@@ -8,7 +8,7 @@ const REGISTER_URL = 'https://bb2pch.github.io/';
 const BBM_URL = 'https://bbmalaysia.org/';
 const INSTAGRAM_URL = 'https://www.instagram.com/bb2ndpuchong/reels/';
 const activityIcons = { worship: Music2, drill: Footprints, badgework: Award, camp: Tent, fellowship: Compass, service: HeartHandshake };
-const activityPages = { drill: 'drill.html', badgework: 'badgework.html' };
+const activityPages = { drill: 'drill.html', badgework: 'badgework.html', camp: 'camp.html' };
 
 function Eyebrow({children, light = false}) {
   return <div className={`eyebrow ${light ? 'eyebrow-light' : ''}`}><span />{children}</div>;
