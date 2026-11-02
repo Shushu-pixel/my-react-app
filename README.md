@@ -41,6 +41,7 @@ The workflow is stored in `.github/workflows/deploy-pages.yml`. Confirm deployme
 - Edit the badgework page in `src/BadgeworkPage.jsx`, award summaries in `src/badgeworkAwards.json`, and photo metadata in `src/badgeworkPhotos.js`. The homepage Badgework card links to `badgework.html`.
 - Edit the camp page in `src/CampPage.jsx`, its 16 stories in `src/campStories.js`, and photo metadata in `src/campPhotos.json`. The homepage Camp card links to `camp.html`.
 - Edit the games page in `src/GamesPage.jsx` and its photo/video metadata in `src/gamesMedia.json`. The homepage Games & fellowship card links to `games.html`.
+- Viewport video playback is shared by Drill and Games through `src/components/ViewportVideo.jsx`.
 - Update styling and brand colour tokens in `src/styles.css`.
 - Registration and ordering: <https://bb2pch.github.io/>
 - Boys’ Brigade Malaysia: <https://bbmalaysia.org/>
@@ -52,7 +53,7 @@ The company logo supplied for this website is stored in `public/images/company-l
 
 The drill page displays five supplied photographs directly in a responsive gallery. Original JPEGs were downloaded from the company’s shared Drive folder and verified before saving under `public/images/drill/`. Every image displays at its natural aspect ratio with a caption; the photographs are not links and do not open a folder or lightbox.
 
-The uploaded `IMG_7749.MP4` appears above the photographs as `public/videos/drill-practice.mp4`, with native playback, volume, seeking and fullscreen controls. The H.264/AAC streams are preserved without re-encoding, and MP4 metadata is moved to the beginning for streaming. Its preview is an actual frame saved as `public/images/drill-video-poster.jpg`. The video plays inline on mobile, preloads metadata only, and does not autoplay.
+The uploaded `IMG_7749.MP4` appears above the photographs as `public/videos/drill-practice.mp4`, with native playback, volume, seeking and fullscreen controls. The H.264/AAC streams are preserved without re-encoding, and MP4 metadata is moved to the beginning for streaming. Its preview is an actual frame saved as `public/images/drill-video-poster.jpg`. Like the games videos, it starts muted when at least half of its frame is visible, pauses offscreen or when the browser tab is hidden, and preserves a manual pause until re-entry. It plays inline on mobile and uses `preload="none"` to defer video data until playback.
 
 The badgework guide covers all 34 Senior Section proficiency awards described on pages 125–184 of the supplied November 2024 BB Malaysia Senior Member’s Handbook, including the four separate band awards. Learning summaries and suggested class activities are paraphrased from that section; they do not replace official assessment requirements or confirm a company course schedule. Each award stores its source page references.
 

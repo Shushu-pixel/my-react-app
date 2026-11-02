@@ -4,6 +4,7 @@ import {
   Footprints, Menu, ShieldCheck, Sparkles, Users, X,
 } from 'lucide-react';
 import Brand from './components/Brand.jsx';
+import ViewportVideo from './components/ViewportVideo.jsx';
 import { drillPhotos } from './drillPhotos.js';
 
 const REGISTER_URL = 'https://bb2pch.github.io/';
@@ -126,10 +127,9 @@ export default function DrillPage({ homeHref = './' }) {
         <div className="drill-media-heading"><div><h2 id="drill-media-title">See us <span>in step.</span></h2><p>Discipline, teamwork and confidence, one parade at a time.<br />A few moments from drill with our company.</p></div></div>
         <figure className="drill-video-card" id="drill-video">
           <div className="drill-video-frame">
-            <video className="drill-video-player" controls playsInline preload="metadata" width="464" height="848" poster={`${import.meta.env.BASE_URL}images/drill-video-poster.jpg`} aria-label="2nd Puchong Company drill practice video" aria-describedby="drill-video-description">
-              <source src={`${import.meta.env.BASE_URL}videos/drill-practice.mp4`} type="video/mp4" />
+            <ViewportVideo mediaId="drill-practice" className="drill-video-player" src={`${import.meta.env.BASE_URL}videos/drill-practice.mp4`} width="464" height="848" poster={`${import.meta.env.BASE_URL}images/drill-video-poster.jpg`} aria-label="2nd Puchong Company drill practice video" aria-describedby="drill-video-description">
               Your browser does not support embedded video. <a href={`${import.meta.env.BASE_URL}videos/drill-practice.mp4`}>Watch the drill video</a>.
-            </video>
+            </ViewportVideo>
           </div>
           <figcaption className="drill-video-caption">
             <DrillEyebrow>DRILL IN MOTION</DrillEyebrow>
